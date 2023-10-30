@@ -4,5 +4,5 @@
 Siyu's branch: task 2 - improvement of accessibility - responsible for Aria improvement
 ## Updates
 2023/10/29 - make sure the individual part of how to improve the accessibility with Jieyi Huang
-2023/10/29 - upload the original UCSD official web pages, the accessibility score on lighthouse is 73
+2023/10/29 - upload the original UCSD official web pages, the accessibility score on lighthouse is 70
 
