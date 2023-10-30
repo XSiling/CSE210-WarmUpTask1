@@ -8,3 +8,7 @@ Siyu's branch: task 2 - improvement of accessibility - responsible for Aria impr
 
 2023/10/29 - upload the original UCSD official web pages, the accessibility score on lighthouse is 70
 
+2023/10/29 - fix all problems though light house, 100/100
+
+
+
