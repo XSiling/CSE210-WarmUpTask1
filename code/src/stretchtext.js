@@ -39,7 +39,9 @@ class StretchText {
     
     const summary = evt.target;
     const detail = this.findDetailFor(summary);
+    
     if (!detail) return;
+
 
     const shouldDisplay = summary.classList.contains("stretchtext-open")
       ? "none"
@@ -54,6 +56,8 @@ class StretchText {
         : this.TITLE_WHEN_CLOSED;
       this.setTitle(summary, title);
     });
+    
+
   }
 
   isBlockLevelDetail(summary) {
@@ -72,6 +76,7 @@ class StretchText {
       const detail = document.getElementById(id);
       if (!detail)
         console.error(`No StretchText details element with ID: ${id}`);
+
       return detail;
     } else {
       const detail = summary.nextElementSibling;
@@ -90,3 +95,4 @@ class StretchText {
 }
 
 new StretchText();
+module.exports = StretchText;
