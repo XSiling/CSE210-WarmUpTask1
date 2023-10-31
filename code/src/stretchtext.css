@@ -1,3 +1,4 @@
+/*box around text that can be expanded*/
 [epub-type="stretchsummary"],
 [epub\:type="stretchsummary"],
 .stretchsummary {
@@ -7,12 +8,14 @@
     text-decoration: none;
 }
 
+/*when the cursor hovers over the box set the border to solid*/
 [epub-type="stretchsummary"]:hover,
 [epub\:type="stretchsummary"]:hover,
 .stretchsummary:hover {
     border-style: solid;
 }
 
+/*pads and adds content after clicked to expand text*/
 [epub-type="stretchsummary"]::after,
 [epub\:type="stretchsummary"]::after,
 .stretchsummary::after {
@@ -21,12 +24,14 @@
     padding: 0 3px;
 }
 
+/*adds left margin for spacing*/
 [epub-type="stretchsummary"] + [epub-type="stretchdetail"],
 [epub\:type="stretchsummary"] + [epub\:type="stretchdetail"],
 .stretchsummary + .stretchdetail {
     margin-left: 0.1em;
 }
 
+/*hides elements when they are invisible and smoothly changes opacity over 0.2 to make them visible*/
 [epub-type="stretchdetail"],
 [epub\:type="stretchdetail"],
 .stretchdetail {
@@ -35,6 +40,7 @@
     transition: opacity 0.2s ease-out;
 }
 
+/* makes elements opaque and gives them a cream colored background */
 [epub-type="stretchdetail"].stretchtext-open,
 [epub\:type="stretchdetail"].stretchtext-open,
 .stretchdetail.stretchtext-open {
@@ -42,6 +48,7 @@
     background-color: #FAF0E6;
 }
 
+/* insert the << character after selected HTML elements when they meet criteria */
 [epub-type="stretchsummary"].stretchtext-open::after,
 [epub\:type="stretchsummary"].stretchtext-open::after,
 .stretchsummary.stretchtext-open::after {
