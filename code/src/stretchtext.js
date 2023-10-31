@@ -75,9 +75,11 @@ class StretchText {
     
     const summary = evt.target;
     const detail = this.findDetailFor(summary);
+    
     if (!detail) return;
 
     // Determine whether the detail should be displayed as 'block' or 'inline'.
+
     const shouldDisplay = summary.classList.contains("stretchtext-open")
       ? "none"
       : this.isBlockLevelDetail(summary) ? "block" : "inline";
@@ -92,6 +94,8 @@ class StretchText {
         : this.TITLE_WHEN_CLOSED;
       this.setTitle(summary, title);
     });
+    
+
   }
 
   /**
@@ -128,6 +132,7 @@ class StretchText {
       const detail = document.getElementById(id);
       if (!detail)
         console.error(`No StretchText details element with ID: ${id}`);
+
       return detail;
     } else {
       // For other summary elements, find the next sibling element.
@@ -152,3 +157,4 @@ class StretchText {
 }
 
 new StretchText();
+module.exports = StretchText;
