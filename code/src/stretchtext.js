@@ -6,7 +6,7 @@
  */
 class StretchText {
   /**
-   * Create a StretchText instance.
+   * Create a StretchText instance
    */
   constructor() {
     // Initialize default titles for open and closed states.
@@ -38,14 +38,14 @@ class StretchText {
    * @param {HTMLElement} summary - The summary element to set up.
    */
   setupSummary(summary) {
-    // Set the default 'title' attribute for the summary element.
+    // Set default 'title' attribute for the summary element.
     summary.setAttribute("title", this.TITLE_WHEN_CLOSED);
 
     // Add event listeners for various interactions.
     summary.addEventListener("mousedown", this.toggleSummary);
     summary.addEventListener("touchstart", this.toggleSummary);
 
-    // Prevent the default click behavior (e.g., following a link).
+    // Prevent default click behavior (e.g., following a link).
     summary.addEventListener("click", (e) => e.preventDefault());
   }
 
@@ -55,7 +55,7 @@ class StretchText {
    * @returns {number} The request ID for the animation frame.
    */
   requestAnimationFrame(callback) {
-    // Use the most suitable available requestAnimationFrame function.
+    // Use most suitable available requestAnimationFrame function.
     return (
       window.requestAnimationFrame ||
       window.webkitRequestAnimationFrame ||
@@ -83,7 +83,7 @@ class StretchText {
       : this.isBlockLevelDetail(summary) ? "block" : "inline";
     detail.style.display = shouldDisplay;
 
-    // Change the display style and update the title in an animation frame.
+    // Change display style and update the title in an animation frame.
     this.requestAnimationFrame(() => {
       summary.classList.toggle("stretchtext-open");
       detail.classList.toggle("stretchtext-open");
