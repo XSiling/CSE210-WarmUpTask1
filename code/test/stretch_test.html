@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--setup main page with css reference-->
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
@@ -8,14 +9,18 @@
 	<link type="text/css" rel="stylesheet" href="../src/stretchtext.css" />
 </head>
 
+<!--start main body-->
 <body>
 	<header>
+<!--		set the mainheader-->
 		<h1>StretchText Example</h1>
 	</header>
 
 	<main>
+<!--		First section using epub-type-->
 		<section>
 			<h2>Using epub-type</h2>
+<!--			First paragraph with stretch summary epub-type for expanding text-->
 			<p>
 				There once was a <span epub-type="stretchsummary">girl</span>
 				<span epub-type="stretchdetail">
@@ -24,6 +29,7 @@
 					Some stuff at the end
 				</span>
 			</p>
+<!--			Second paragraph with stretch text-->
 			<p>
 				Most scientists accept
 				<a href="#global-warming-details" epub-type="stretchsummary">global warming</a>.
@@ -47,6 +53,8 @@
 				down.
 			</p>
 		</section>
+
+<!--		Section ussing css class instead of epub-type. The rest is the same data inside-->
 		<section>
 			<h2>Using CSS Class</h2>
 			<p>
@@ -79,7 +87,7 @@
 			This is material at the bottom of the page that will get stretched down.
 		</p>
 	</footer>
-
+<!--	pointer to js script-->
 	<script src="../src/stretchtext.js"></script>
 </body>
 
